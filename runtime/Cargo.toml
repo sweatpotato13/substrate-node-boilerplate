@@ -18,6 +18,13 @@ scale-info = { version = "2.1.1", default-features = false, features = ["derive"
 
 pallet-aura = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
 pallet-balances = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
+pallet-bounties = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+pallet-child-bounties = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+pallet-collective = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+pallet-democracy = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+pallet-scheduler = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+pallet-treasury = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
+pallet-preimage = { git = "https://github.com/paritytech/substrate", default-features = false, branch = "polkadot-v0.9.37" }
 frame-support = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
 pallet-grandpa = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
 pallet-randomness-collective-flip = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
@@ -38,6 +45,9 @@ sp-session = { version = "4.0.0-dev", default-features = false, git = "https://g
 sp-std = { version = "5.0.0", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
 sp-transaction-pool = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
 sp-version = { version = "5.0.0", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
+
+# Polkadot
+polkadot-runtime-common = { git = "https://github.com/paritytech/polkadot", default-features = false, branch = "release-v0.9.37" }
 
 # Used for the node template's RPCs
 frame-system-rpc-runtime-api = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.37" }
@@ -68,13 +78,21 @@ std = [
 	"frame-try-runtime/std",
 	"pallet-aura/std",
 	"pallet-balances/std",
+	"pallet-bounties/std",
+	"pallet-child-bounties/std",
+	"pallet-collective/std",
+    'pallet-democracy/std',
 	"pallet-grandpa/std",
+	"pallet-preimage/std",
 	"pallet-randomness-collective-flip/std",
 	"pallet-sudo/std",
+	"pallet-scheduler/std",
 	"pallet-template/std",
 	"pallet-timestamp/std",
+	"pallet-treasury/std",
 	"pallet-transaction-payment-rpc-runtime-api/std",
 	"pallet-transaction-payment/std",
+	"polkadot-runtime-common/std",
 	"sp-api/std",
 	"sp-block-builder/std",
 	"sp-consensus-aura/std",
@@ -93,7 +111,12 @@ runtime-benchmarks = [
 	"frame-system-benchmarking/runtime-benchmarks",
 	"frame-system/runtime-benchmarks",
 	"pallet-balances/runtime-benchmarks",
+	"pallet-bounties/runtime-benchmarks",
+	"pallet-child-bounties/runtime-benchmarks",
+	"pallet-scheduler/runtime-benchmarks",
 	"pallet-grandpa/runtime-benchmarks",
+	"pallet-preimage/runtime-benchmarks",
+	"pallet-treasury/runtime-benchmarks",
 	"pallet-template/runtime-benchmarks",
 	"pallet-timestamp/runtime-benchmarks",
 	"sp-runtime/runtime-benchmarks",
@@ -105,9 +128,15 @@ try-runtime = [
 	"frame-support/try-runtime",
 	"pallet-aura/try-runtime",
 	"pallet-balances/try-runtime",
+	"pallet-bounties/try-runtime",
+	"pallet-child-bounties/try-runtime",
+	"pallet-collective/try-runtime",
 	"pallet-grandpa/try-runtime",
 	"pallet-randomness-collective-flip/try-runtime",
+	"pallet-preimage/try-runtime",
 	"pallet-sudo/try-runtime",
+	"pallet-scheduler/try-runtime",
+	"pallet-treasury/try-runtime",
 	"pallet-template/try-runtime",
 	"pallet-timestamp/try-runtime",
 	"pallet-transaction-payment/try-runtime",
